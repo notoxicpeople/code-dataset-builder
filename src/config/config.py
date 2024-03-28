@@ -34,4 +34,4 @@ LICENSE_TYPE_FILTER = ["permissive", "no_license"]
 
 # その他の設定
 TOKEN_SIZE_BYTES = 4  # 1トークンあたりの平均バイト数
-SAMPLE_SIZE_TOKENS = 10**9  # サンプリングするトークンの数（10億トークン）
+SAMPLE_SIZE_TOKENS = 10**9  # 取得するトークンの数（10億トークン）
