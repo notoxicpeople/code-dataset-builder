@@ -19,7 +19,7 @@ def load_and_merge_datasets(dataset_classes):
 
 def save_data_to_file(data, file_path):
     """
-    データをJSONファイルに保存する
+    データをparquetファイルに保存する
     :param data: 保存するデータ
     :param file_path: 保存するファイルのパス
     """
