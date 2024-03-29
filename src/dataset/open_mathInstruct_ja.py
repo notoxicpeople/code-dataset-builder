@@ -17,7 +17,7 @@ class OpenMathInstructJa:
 
     def _filter_records(self, dataset):
         """特定の条件に基づいてデータセットからレコードをフィルタリング"""
-        return [record for record in tqdm(dataset, desc="Filtering records") if self._is_valid_record(record)][:10]
+        return [record for record in tqdm(dataset, desc="Filtering records") if self._is_valid_record(record)]
 
     def _is_valid_record(self, record):
         """レコードが条件に合致するか確認"""
