@@ -29,9 +29,9 @@ COMMON_DATA_OPEN_MATH_INSTRUCT = {"data_source": DATASET_NAME_OPEN_MATH_INSTRUCT
 COMMON_DATA_THE_STACK_V2 = {"data_source": DATASET_NAME_THE_STACK_V2, "language": "Python"}
 
 # フィルタリングに使用する設定
-LANG_FILTER = ["Python"]
-LICENSE_TYPE_FILTER = ["permissive", "no_license"]
+LANG_FILTER_THE_STACK_V2 = ["Python"]
+LICENSE_TYPE_FILTER_THE_STACK_V2 = ["permissive", "no_license"]
 
 # その他の設定
-TOKEN_SIZE_BYTES = 4  # 1トークンあたりの平均バイト数
-SAMPLE_SIZE_TOKENS = 10**9  # 取得するトークンの数
+TOKEN_SIZE_BYTES_THE_STACK_V2 = 4  # 1トークンあたりの平均バイト数
+SAMPLE_SIZE_TOKENS_THE_STACK_V2 = 10**9  # 取得するトークンの数

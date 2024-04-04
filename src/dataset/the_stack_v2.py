@@ -11,7 +11,7 @@ from config.config import *
 class TheStackV2:
     def __init__(self):
         self.s3_client = None
-        self.sampled_byte_size = SAMPLE_SIZE_TOKENS * TOKEN_SIZE_BYTES
+        self.sampled_byte_size = TOKEN_SIZE_BYTES_THE_STACK_V2 * SAMPLE_SIZE_TOKENS_THE_STACK_V2
 
     def load_dataset(self):
         """データセットのロードと処理"""
@@ -48,7 +48,7 @@ class TheStackV2:
         """ファイルをフィルタリングし、ダウンロードして内容を取得"""
         contents = []
         for file in files:
-            if file["language"] in LANG_FILTER and file["license_type"] in LICENSE_TYPE_FILTER:
+            if file["language"] in LANG_FILTER_THE_STACK_V2 and file["license_type"] in LICENSE_TYPE_FILTER_THE_STACK_V2:
                 content = self._download_content(file["blob_id"], file["src_encoding"])
                 contents.append(
                     {
