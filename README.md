@@ -12,6 +12,12 @@ python src/main.py
 ```
 
 - 実行結果は result.parquet として直下に保存されます。
+- config.py内において、以下の値を修正することで、挙動を変更できます。
+  - SEPARATOR_OPEN_MATH_INSTRUCT：　OpenMathInstructの回答と質問を統合する際のセパレータを指定できます。デフォルトでは[SEP]となっています。
+  - TOKEN_SIZE_BYTES：　TheStackのみの設定値で、1トークンあたりのバイト数を指定できます。これと以下のSAMPLE_SIZE_TOKENSをかけて、ダウンロード対象の容量を計算しています。ダウンロード対象の容量を超えたら、ダウンロードを停止します。
+  - SAMPLE_SIZE_TOKENS：　TheStackのみの設定値で、この値とTOKEN_SIZE_BYTESをかけて、ダウンロード対象の容量を計算しています。ダウンロード対象の容量を超えたら、ダウンロードを停止します。
+  - LANG_FILTER：　TheStackのみの設定値で、ダウンロード対象の言語を複数指定できます。C++やPythonなどを指定すると、指定された言語のみをダウンロードします。
+  - LICENSE_TYPE_FILTER：　TheStackのみの設定値で、ダウンロード対象のライセンスを複数指定できます。値は、"permissive"と"no_license"の2種類で、前者はオープンソースで使う上で寛容なライセンスが設定されているコードを表し、後者はライセンスが設定されていないコードを表します。
 
 ## 処理概要
 ### OpenMathInstruct-1-1.8m-ja
