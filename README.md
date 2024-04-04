@@ -4,6 +4,7 @@ The Stack v2とOpenMathInstruct-jaを対象として、これらのデータセ�
 
 ## 実行方法
 - .env.sample をコピーし、.env と名前を変更し、.envの内容を変更してください。
+  - hugging faceおよび、AWS S3を使用するので、AWSアクセスキーID（AWS_ACCESS_KEY_ID）、AWSシークレットキー（AWS_SECRET_ACCESS_KEY）、hugging faceトークン（HUGGING_FACE_TOKEN）の設定が必要です。
 - 以下でライブラリをインストールし、実行してください。
 
 ```bash
