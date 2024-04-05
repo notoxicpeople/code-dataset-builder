@@ -48,7 +48,11 @@ class TheStackV2:
         """ファイルをフィルタリングし、ダウンロードして内容を取得"""
         contents = []
         for file in files:
-            if file["language"] in LANG_FILTER_THE_STACK_V2 and file["license_type"] in LICENSE_TYPE_FILTER_THE_STACK_V2:
+            if (
+                ("all" in LANG_FILTER_THE_STACK_V2 or file["language"] in LANG_FILTER_THE_STACK_V2)
+                and ("all" in LICENSE_TYPE_FILTER_THE_STACK_V2 or file["license_type"] in LICENSE_TYPE_FILTER_THE_STACK_V2)
+                and ("all" in DETECTED_LICENSES_FILTER_THE_STACK_V2 or any(license in DETECTED_LICENSES_FILTER_THE_STACK_V2 for license in file["detected_licenses"]))
+            ):
                 content = self._download_content(file["blob_id"], file["src_encoding"])
                 contents.append(
                     {
